@@ -9,7 +9,17 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
-
+    <script src="./js.js"></script>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+  emailjs.init({
+    publicKey: "NuN1R9hDwt0-axu9Q",
+  });
+})();
+</script>
 
 
 </head>
@@ -318,14 +328,14 @@
         <h1>CONTACT <span> ME</span></h1>
         <!-- <P>DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</P>/ -->
         <form action="">
-            <input type="" placeholder="ENTER YOUR NAME" required>
-            <input type="email" name="email" id="" placeholder="ENTER YOUR E-MAIL"required>
-            <input type="" placeholder="WRITE THE SUBJECT" required>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your message" required >
+            <input type="name" placeholder="ENTER YOUR NAME" id="name" required>
+            <input type="email" name="email" id="email" placeholder="ENTER YOUR E-MAIL"required>
+            <input type="message" id="message" placeholder="WRITE THE SUBJECT" required>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Your message"  >
 
 
             </textarea>
-            <input type="submit" name="" value="submit" class="btn">
+            <input onclick="sendMail()" type="submit" name="" value="submit" class="btn">
         </form>
 
     </div>
